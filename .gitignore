@@ -20,8 +20,8 @@ go.work
 # Build output
 /bin/
 /dist/
-desktop-automation
-desktop-automation.exe
+/desktop-automation
+/desktop-automation.exe
 
 # IDE files
 .vscode/
