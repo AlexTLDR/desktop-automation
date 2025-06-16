@@ -5,6 +5,7 @@ go 1.21
 require (
 	github.com/charmbracelet/bubbletea v0.25.0
 	github.com/go-vgo/robotgo v0.110.1
+	github.com/spf13/cobra v1.9.1
 )
 
 require (
@@ -12,6 +13,7 @@ require (
 	github.com/containerd/console v1.0.4-0.20230313162750-1ae8d489ac81 // indirect
 	github.com/gen2brain/shm v0.0.0-20230802011745-f2460f5984f7 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/jezek/xgb v1.1.0 // indirect
 	github.com/kbinani/screenshot v0.0.0-20230812210009-b87d31814237 // indirect
 	github.com/lucasb-eyer/go-colorful v1.2.0 // indirect
@@ -31,6 +33,7 @@ require (
 	github.com/robotn/xgbutil v0.0.0-20190912154524-c861d6f87770 // indirect
 	github.com/shirou/gopsutil/v3 v3.23.8 // indirect
 	github.com/shoenig/go-m1cpu v0.1.6 // indirect
+	github.com/spf13/pflag v1.0.6 // indirect
 	github.com/tklauser/go-sysconf v0.3.12 // indirect
 	github.com/tklauser/numcpus v0.6.1 // indirect
 	github.com/vcaesar/gops v0.30.2 // indirect
