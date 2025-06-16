@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
+	"github.com/AlexTLDR/desktop-automation/internal/automation"
 	"github.com/spf13/cobra"
 )
 
@@ -55,12 +56,17 @@ func runClick(args []string) error {
 		return fmt.Errorf("y coordinate must be non-negative, got %d", y)
 	}
 
-	// TODO: Implement actual click functionality
-	// This is a placeholder for the actual implementation
-	fmt.Printf("Clicking at coordinates (%d, %d)\n", x, y)
+	// Show current mouse position before clicking
+	currentX, currentY := automation.GetPosition()
+	fmt.Printf("Current mouse position: (%d, %d)\n", currentX, currentY)
 
-	// Placeholder for actual mouse click implementation
-	// Example: return automation.ClickAt(x, y)
+	// Perform the click
+	if err := automation.Click(x, y); err != nil {
+		return fmt.Errorf("failed to click at (%d, %d): %v", x, y, err)
+	}
+
+	// Confirm success
+	fmt.Printf("Successfully clicked at coordinates (%d, %d)\n", x, y)
 
 	return nil
 }
