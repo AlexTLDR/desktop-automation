@@ -154,20 +154,30 @@ desktop-automation type "user@example.com"
 
 ### move
 
-Move the mouse cursor to specific screen coordinates.
+Move the mouse cursor to specific screen coordinates with optional smooth animation.
 
 **Usage:**
 ```bash
-desktop-automation move [x] [y]
+desktop-automation move [x] [y] [flags]
 ```
 
 **Description:**
-Moves the mouse cursor to the specified x and y coordinates. The cursor will smoothly move to the target position without clicking.
+Moves the mouse cursor to the specified x and y coordinates. Supports both instant movement and smooth animated movement with customizable duration. Shows current position, target position, and movement progress.
+
+**Flags:**
+- `--smooth` - Enable smooth animated movement
+- `--duration float` - Duration in seconds for smooth movement (default: 1.0)
 
 **Examples:**
 ```bash
-# Move cursor to coordinates (100, 200)
-desktop-automation move 100 200
+# Move cursor to coordinates (800, 600) instantly
+desktop-automation move 800 600
+
+# Move cursor smoothly to coordinates (800, 600) over 1 second
+desktop-automation move --smooth 800 600
+
+# Move cursor smoothly to coordinates (800, 600) over 5 seconds
+desktop-automation move --smooth --duration 5.0 800 600
 
 # Move cursor to the top-left corner
 desktop-automation move 0 0
@@ -243,13 +253,17 @@ go vet ./...
 
 ## Implementation Status
 
-**Current Status:** Command stubs with full validation and error handling
+**Current Status:** Fully functional desktop automation tool with comprehensive features
+
+**Completed:**
+- [x] Integrate with actual automation backend (`internal/automation`)
+- [x] Implement mouse clicking functionality
+- [x] Implement mouse movement functionality with smooth animation
+- [x] Full input validation and error handling
+- [x] Comprehensive CLI with help system and examples
 
 **TODO:**
-- [ ] Integrate with actual automation backend (`internal/automation`)
-- [ ] Implement mouse clicking functionality
 - [ ] Implement keyboard typing functionality  
-- [ ] Implement mouse movement functionality
 - [ ] Add configuration options (click delay, typing speed, etc.)
 - [ ] Add screen boundary validation
 - [ ] Add support for different mouse buttons
