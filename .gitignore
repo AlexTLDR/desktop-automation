@@ -22,6 +22,7 @@ go.work
 /dist/
 /desktop-automation
 /desktop-automation.exe
+.task/
 
 # IDE files
 .vscode/
