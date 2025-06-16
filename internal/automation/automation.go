@@ -33,9 +33,14 @@ func NewKeyboard() *Keyboard {
 	return &Keyboard{}
 }
 
-// Type types the given text
-func (k *Keyboard) Type(text string) {
-	robotgo.TypeStr(text)
+// Type types the given text using the TypeString function
+func (k *Keyboard) Type(text string) error {
+	return TypeString(text)
+}
+
+// TypeWithDelay types the given text with a delay between characters
+func (k *Keyboard) TypeWithDelay(text string, delayMs int) error {
+	return TypeStringWithDelay(text, delayMs)
 }
 
 // Screen provides screen capture functionality
