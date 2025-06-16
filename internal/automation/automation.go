@@ -35,7 +35,7 @@ func NewKeyboard() *Keyboard {
 
 // Type types the given text
 func (k *Keyboard) Type(text string) {
-	robotgo.Type(text)
+	robotgo.TypeStr(text)
 }
 
 // Screen provides screen capture functionality
@@ -47,6 +47,6 @@ func NewScreen() *Screen {
 }
 
 // Capture captures the entire screen
-func (s *Screen) Capture() robotgo.Bitmap {
+func (s *Screen) Capture() robotgo.CBitmap {
 	return robotgo.CaptureScreen()
 }
