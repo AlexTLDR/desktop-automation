@@ -8,10 +8,13 @@ import (
 	"github.com/spf13/cobra"
 )
 
+const version = "v0.1.0"
+
 var rootCmd = &cobra.Command{
-	Use:   "desktop-automation",
-	Short: "Beautiful Desktop Automation CLI",
-	Long:  "A beautiful and powerful CLI tool for desktop automation tasks including mouse control, keyboard input, and screen interactions.",
+	Use:     "desktop-automation",
+	Short:   "Beautiful Desktop Automation CLI",
+	Long:    "A beautiful and powerful CLI tool for desktop automation tasks including mouse control, keyboard input, and screen interactions.",
+	Version: version,
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Help()
 	},
